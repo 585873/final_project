@@ -1,1 +1,12 @@
+<h2>Edit Score </h2>
 
+<%= form_for @game do |f| %>
+  <%= f.label :teamwon %>
+  <%= f.text_field :teamwon %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @game, method: :delete do |f| %>
+ <%= f.submit "Delete", class: "delete" %>
+<% end %>

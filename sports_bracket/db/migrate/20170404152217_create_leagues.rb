@@ -3,6 +3,7 @@ class CreateLeagues < ActiveRecord::Migration[5.0]
     create_table :leagues do |t|
       t.string :name
       t.string :channel
+      t.string :teams
     end
   end
 end

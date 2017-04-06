@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+nav{
+  text-align: center;
+}
+nav h1 {
+  display: flex;
+  justify-content: space-around;
+}
+h1{
+  color: red;
+}
+.logo{
+  color: blue;
+}
+.logo:hover{
+  background-color: yellow;
+}
+
+body{
+   background-image: url("http://bit.ly/2o7EU5X");
+   /*background-size: cover;*/
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+ }

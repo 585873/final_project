@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170405162854) do
   create_table "leagues", force: :cascade do |t|
     t.string "name"
     t.string "channel"
+    t.string "teams"
   end
 
   add_foreign_key "games", "leagues"
