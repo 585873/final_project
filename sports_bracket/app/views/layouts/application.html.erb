@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <h1>Sports Scoring App</h1>
+    <nav>
+      <h1>View all updates here!</h1>
+      <h2><%= link_to "All Leagues", leagues_path %></h2>
+      <h2><%= link_to "View All Game Scores", games_path %> </h2>
+    </nav>
     <%= yield %>
   </body>
 </html>

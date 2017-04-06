@@ -10,15 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404152225) do
+ActiveRecord::Schema.define(version: 20170405162854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "games", force: :cascade do |t|
+    t.string  "team1"
+    t.string  "team2"
+    t.string  "scoreteam1"
+    t.string  "scoreteam2"
+    t.string  "teamwon"
+    t.integer "league_id"
+    t.index ["league_id"], name: "index_games_on_league_id", using: :btree
+  end
+
   create_table "leagues", force: :cascade do |t|
+    t.string "name"
+    t.string "channel"
   end
 
-  create_table "teams", force: :cascade do |t|
-  end
-
+  add_foreign_key "games", "leagues"
 end

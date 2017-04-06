@@ -1,0 +1,6 @@
+
+<% @leagues.each do |league| %>
+  <div class="league">
+    <h2><a href="<%= league_path(league) %>"><%= league.name %></a></h2>
+  </div>
+<% end %>
