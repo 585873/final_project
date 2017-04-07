@@ -13,20 +13,20 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
-    @league_league = League.all.map{|league| league.name}
+    # @league_league = League.all.map{|league| league.name}
   end
 
  #create
   def create
-    @game = Game.find_by(params[:game])
+    @game = Game.new(game_params)
     @game.save
-    redirect_to game_path(@game)
+    redirect_to games_path(@game)
   end
 #update
   def update
    @game = Game.find(params[:id])
    @game.update(game_params)
-   redirect_to game_path
+   redirect_to @game
  end
  #delete
  def destroy
