@@ -1,9 +1,20 @@
-<h1>Add new Scores here!</h1>
-<%= form_for @game do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<h2>Add New Game Score</h2>
 
-  <%= f.select(:league, options_for_select(@league_league))%>
-
-  <%= f.submit %
+<%= form_for [@league, @game] do |f| %>
+ <%= f.label :team1 %>
+ <%= f.text_field :team1 %>
+<br>
+ <%= f.label :team2 %>
+ <%= f.text_field :team2 %>
+<br>
+ <%= f.label :scoreteam1%>
+ <%= f.text_field :scoreteam1 %>
+<br>
+ <%= f.label :scoreteam2 %>
+ <%= f.text_field :scoreteam2 %>
+<br>
+ <%= f.label :teamwon %>
+ <%= f.text_field :teamwon %>
+<br>
+ <%= f.submit "Submit" %>
 <% end %>

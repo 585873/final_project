@@ -1,9 +1,12 @@
 <h1>Game Score Center</h1>
+<h5 class="add"><%= link_to "Add New Game Score", new_game_path(@league) %></h5>
+
   <% @games.each do |game| %>
-  <div>
-    <h2><%= game.team1 %> </h2>
-    <h2><%= game.scoreteam1 %> </h2>
-    <h2><%= game.team2 %></h2>
-    <h2><%= game.scoreteam2 %> </h2>
-    <h2><%= game.teamwon %> </h2>
+    <div>
+      <h2><%= game.team1 %> </h2>
+      <h2><%= game.scoreteam1 %> </h2>
+      <h2><%= game.team2 %></h2>
+      <h2><%= game.scoreteam2 %> </h2>
+      <h2> <%= link_to game.teamwon, game_path(game) %> </h2>
+    </div>
   <% end %>

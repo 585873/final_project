@@ -4,9 +4,15 @@
   <%= f.label :teamwon %>
   <%= f.text_field :teamwon %>
 
-  <%= f.submit %>
+  <%= f.label :scoreteam1%>
+  <%= f.text_field :scoreteam1 %>
+
+  <%= f.label :scoreteam2%>
+  <%= f.text_field :scoreteam2 %>
+
+  <%= f.submit "Submit"%>
 <% end %>
 
-<%= form_for @game, method: :delete do |f| %>
+<!-- <%= form_for @game, method: :delete do |f| %>
  <%= f.submit "Delete", class: "delete" %>
-<% end %>
+<% end %> -->
